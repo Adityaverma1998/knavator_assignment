@@ -18,15 +18,12 @@ Follow these steps to get the application up and running on your local machine:
 1. Clone the Repository
 Clone this repository to your local machine using the following command:
 
-bash
-Copy code
 git clone https://github.com/your-username/knavator_assignment.git
 cd knavator_assignment
 2. Install Dependencies
 Install the required packages for your Flutter app:
 
-bash
-Copy code
+
 flutter pub get
 This will install all the necessary dependencies specified in the pubspec.yaml file.
 
@@ -34,18 +31,15 @@ This will install all the necessary dependencies specified in the pubspec.yaml f
 Ensure you have either an Android or iOS emulator running, or a physical device connected.
 
 To check if a device is connected, run:
-bash
-Copy code
+
 flutter devices
 To run the app on your connected device or emulator, use:
-bash
-Copy code
+
 flutter run
 4. Run the App
 To launch the app on the connected device or emulator:
 
-bash
-Copy code
+
 flutter run
 Third-Party Packages Used
 This application uses several third-party packages to streamline development and add functionality:
