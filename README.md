@@ -1,4 +1,4 @@
-#Knavator Assignment - Flutter App
+Knavator Assignment - Flutter App
 This is a Flutter application that fetches posts from an API, stores them locally using SQLite, and displays them in a simple UI. The app uses third-party packages such as Dio for network requests, Sqflite for local storage, and Flutter Launcher Icons for app icon customization.
 
 Features
@@ -77,4 +77,23 @@ Usage: Configure the app icon in the pubspec.yaml file and then run:
 bash
 Copy code
 flutter pub run flutter_launcher_icons:main
+
+
 This will generate the appropriate icons for the app.
+How the App Works
+API Service: The app fetches posts from an external API using Dio (handled by ApiService).
+Local Storage: Posts are stored locally in an SQLite database via the DBHelper class using the sqflite package.
+UI: The posts are displayed in a scrollable list with some separation between each post using ListView.separated. A FutureBuilder is used to asynchronously load the data from the database, showing a loading spinner while the data is being fetched.
+
+Troubleshooting
+If you encounter any issues during setup or running the app, make sure:
+Your Flutter environment is set up correctly (flutter doctor).
+All dependencies are installed with flutter pub get.
+You have a valid device or emulator set up to run the app.
+Contribution
+Feel free to contribute to this project by opening issues or creating pull requests. If you find any bugs or would like to request new features, please open an issue.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
