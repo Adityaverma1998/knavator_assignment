@@ -3,6 +3,7 @@ import 'dart:math';
 class Post {
   final String id;
   final String title;
+  final String body;
   final int timerDuration;
   bool isRead;
   int remainingTime;
@@ -10,6 +11,7 @@ class Post {
   Post({
     required this.id,
     required this.title,
+    required this.body,
     required this.timerDuration,
     this.isRead = false,
     int? remainingTime,
@@ -26,6 +28,7 @@ class Post {
   static Post fromJson(Map<String, dynamic> json) => Post(
     id: json['id'],
     title: json['title'],
+    body: '',
     timerDuration: json['timerDuration'],
     isRead: json['isRead'] == 1,
     remainingTime: json['remainingTime'],
@@ -37,6 +40,6 @@ class Post {
 
   factory Post.createPostWithRandomTimer(String id, String title) {
     final timerDuration = generateRandomTimerDuration();
-    return Post(id: id, title: title, timerDuration: timerDuration);
+    return Post(id: id, title: title, body: '', timerDuration: timerDuration); // Empty body
   }
 }
